@@ -1,11 +1,12 @@
 function setup() {
-  createCanvas(800,800)
+  createCanvas(windowWidth,windowHeight)
+  background(51, 10, 0)
 }
 
 function draw() {
   
   fill(255,100,255,100)
-  stroke(255)
+  noStroke()
   
   for (var i=0;i<touches.length;i++) {
     
