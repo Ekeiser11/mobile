@@ -1,12 +1,23 @@
 function setup() {
   createCanvas(windowWidth,windowHeight)
-  background(51, 10, 0)
-  frameRate(80)
+  background(0)
+  smooth();
+  ellipseMode(CENTER);
+  frameRate(20)
 }
 
 function draw() {
+  stroke(191, 191, 191,10);
+  fill(242, 242, 242,5);
   
-  fill(255,100,255,100)
+  push();
+  translate(width/2,height/2);
+  rotate(map(sin(0.001*frameCount),-1, 1, 0, TWO_PI));
+  ellipse(0,0,720,random(720));
+  pop();
+  
+  
+  fill(13, 13, 13,100)
   noStroke()
   
   for (var i=0;i<touches.length;i++) {
